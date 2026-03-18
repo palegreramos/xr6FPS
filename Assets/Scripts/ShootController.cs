@@ -6,11 +6,13 @@ using UnityEngine.XR;
 
 public class ShootController : MonoBehaviour
 {
-    public GameObject prefabBullet;
-    public float shootForce;
-    public Transform shootPoint;
+    [Header("Disparo")]
+    [SerializeField] private GameObject prefabBullet;
+    [SerializeField] private float shootForce;
+    [SerializeField] private Transform shootPoint;
+    [SerializeField] private GameObject particulasHumo;
+
     private GameObject currentBullet;
-    public GameObject particulasHumo;
 
     public void OnShoot(InputAction.CallbackContext context)
     {
